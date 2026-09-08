@@ -4,34 +4,65 @@
   --txt-col1: #fff;
   --txt-col2: #212529;
   --btn-bg1: #4f9cf9;
+  --brdr-col1: #A7CEFC;
 }
 
 *, ::before, ::after { padding: 0; margin: 0; box-sizing: border-box;}
-body { min-height: 100vh; display: flex; flex-direction: column; align-items: center; overflow-x: hidden;}
-.site-header { background-color: var(--bg-col1); height: 56px; padding: 16px; width: 100%;}
+html { overflow-x: hidden;}
+body { min-height: 100vh; display: grid; grid-template-columns: 1fr; overflow-x: hidden;}
+.site-header { background-color: var(--bg-col1); height: 56px; padding: 16px;}
 .nav-bar { display: flex; justify-content: space-between; align-items: center; overflow: hidden;}
 .hamburger { background: none; width: 42px; height: 24px; display: flex; flex-direction: column; gap: 8px;}
 .hamburger .bar { width: 100%; height: 2px; background-color: var(--txt-col1);}
 .nav-menu { position: absolute; right: -9999px; top: 0; list-style: none; background-color: var(--bg-col1); padding: 30px 20px; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; gap: 25px; height: auto; width: 200px;}
 .nav-menu a { text-decoration: none; color: var(--txt-col1);}
-main { width: 100%;}
+main { overflow-x: hidden;}
+section {  overflow-x: hidden;}
 .hero { padding: 80px 16px; background-color: var(--bg-col1); color: var(--txt-col1); position: relative;}
-.hero-bg {position: absolute; z-index: 0; inset: 0; pointer-events: none; width: 100%; height: 100%;
-background-image: url('../assets/images/mobile-hero-bg.png'); background-size: cover; background-repeat: no-repeat;}
+.hero-bg {position: absolute; z-index: 0; inset: 0; pointer-events: none; width: 320px; height: 100%;
+background-image: url('../assets/images/mobile-hero-bg.png'); background-size: cover; background-repeat: no-repeat; margin: 0 auto;}
 /*.hero-bg svg { width: 100%; height: 90%;}*/
-.hero-content { z-index: 1; position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(286px, 1fr)); }
-.hero-text { display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 656px;}
+.hero-content { z-index: 1; position: relative; display: grid; grid-template-columns: 1fr;  margin: 0 auto;}
+.hero-text { display: flex; flex-direction: column; align-items: center; text-align: center; width: 286px; margin: 0 auto;}
 .hero h1 { margin-bottom: 24px; font-size: 36px;}
 .hero p { margin-bottom: 60px; font-size: 18px;}
 .hero .taskey { background-color: var(--btn-bg1); padding: 20px 40px; border: none; border-radius: 8px; color: var(--txt-col1);  margin-bottom: 100px; font-size: 18px;}
-.hero-img { height: 191px; background: var(--bg-col2); max-width: 824px; width: 100%;}
+.hero-img { height: 191px; background: var(--bg-col2); width: 286px; margin: 0 auto;}
 
-.sectionII { padding: 80px 16px; position: relative;}
+.sectionII { padding: 80px 16px 0; position: relative; margin-bottom: 100px;}
 .sectionII-bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; top: 40px;}
-.sectionII-content { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(auto-fit, minmax(286px, 1fr));}
-.sectionII-text { text-align: center; color: var(--txt-col2); display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 672px;}
+.sectionII-content { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr;}
+.sectionII-text { text-align: center; color: var(--txt-col2); display: flex; flex-direction: column; align-items: center; text-align: center; width: 286px; margin: 0 auto;}
 .sectionII .yellow {  position: relative; display: inline-block; z-index: 2; background-image: url('../assets/images/drawing.svg'); background-repeat: no-repeat; padding-bottom: 15px; background-position: center bottom;}
 .sectionII h2 { font-size: 36px; margin-bottom: 24px; z-index: 1;}
 .sectionII p { font-size: 18px; margin-bottom: 60px;}
 .sectionII button { font-size: 18px; background-color: var(--btn-bg1); padding: 20px 40px; border: none; border-radius: 8px; color: var(--txt-col1);  margin-bottom: 60px;}
-.sectionII-img { background: var(--bg-col2); max-width: 748px; width: 100%; height: 177px;}
+.sectionII-img { background: var(--bg-col2); width: 286px; height: 177px; margin: 0 auto;}
+
+.sectionIII { padding: 0px 16px 80px; position: relative; margin-bottom: 100px; display: grid; grid-template-columns: 1fr; grid-template-areas: "contnt" "orbit"; gap: 40px;}
+.sectionIII-cont { text-align: center; color: var(--txt-col2); display: flex; flex-direction: column; align-items: center; text-align: center; grid-area: contnt; width: 286px; margin: 0 auto;}
+.sectionIII h2 { font-size: 36px; margin-bottom: 24px; z-index: 1;}
+.sectionIII .undrlin {  position: relative; display: inline-block; z-index: 2; background-image: url('../assets/images/drawing.svg'); background-repeat: no-repeat; padding-bottom: 4px; background-position: center bottom;}
+.sectionIII p { font-size: 18px; margin-bottom: 60px;}
+.sectionIII button { font-size: 18px; background-color: var(--btn-bg1); padding: 20px 40px; border: none; border-radius: 8px; color: var(--txt-col1);  margin-bottom: 60px;}
+.sectionIII-circles { position: relative; width: 259.74px; height: auto; aspect-ratio: 1 / 1; display: grid; place-items: center;  align-self: center; grid-area: orbit; margin: 0 auto;}
+.sectionIII-circles .big { position: absolute; width: 100%; height: auto; aspect-ratio: 1 / 1; border: 2px dashed var(--brdr-col1); border-radius: 50%; animation: spinb 10s linear infinite;}
+.bcircle, .scircle { position: absolute; width: 27.51px; height: 27.51px; border-radius: 50%; top: 50%; transform: translate(-50%);}
+.bcircle:nth-of-type(1) { background-color: #FF5758;}
+.bcircle:nth-of-type(2) { background-color: #FFDC4D; top: 10%; left: 15%;}
+.bcircle:nth-of-type(3) { background-color: var(--btn-bg1); top: 15%; left: 90%;}
+.bcircle:nth-of-type(4) { background-color: #00CA75; top: 65%; left: 96%;}
+.bcircle:nth-of-type(5) { background-color: var(--btn-bg1); top: 85%; left: 20%;}
+.sectionIII-circles .small { position: absolute; width: 152.07px; height: auto; aspect-ratio: 1 / 1; border: 2px dashed var(--brdr-col1); border-radius: 50%;  animation: spins 7s linear infinite;}
+.scircle:nth-of-type(1) { background-color: var(--btn-bg1);}
+.scircle:nth-of-type(2) { background-color: #00CA75; top: -10%; left: 47%;}
+.scircle:nth-of-type(3) { background-color: var(--btn-bg1); top: 47%; left: 100%;}
+.scircle:nth-of-type(4) { background-color: #FFDC4D; top: 90%; left: 53%;}
+@keyframes spinb {
+  from { transform: rotate(0deg);}
+  to { transform: rotate(360deg);}
+}
+@keyframes spins {
+  from { transform: rotate(0deg);}
+  to { transform: rotate(360deg);}
+}
