@@ -42,7 +42,7 @@ background-image: url('../assets/images/mobile-hero-bg.png'); background-size: c
 .sectionIII { padding: 0px 16px 80px; position: relative; margin-bottom: 100px; display: grid; grid-template-columns: 1fr; grid-template-areas: "contnt" "orbit"; gap: 40px;}
 .sectionIII-cont { text-align: center; color: var(--txt-col2); display: flex; flex-direction: column; align-items: center; text-align: center; grid-area: contnt; width: 286px; margin: 0 auto;}
 .sectionIII h2 { font-size: 36px; margin-bottom: 24px; z-index: 1;}
-.sectionIII .undrlin {  position: relative; display: inline-block; z-index: 2; background-image: url('../assets/images/drawing.svg'); background-repeat: no-repeat; padding-bottom: 4px; background-position: center bottom;}
+.sectionIII .undrlin {  position: relative; display: inline-block; z-index: 2; background-image: url('../assets/images/drawing.svg'); background-repeat: no-repeat; padding-bottom: 0px; background-position: center bottom; background-size: contain;}
 .sectionIII p { font-size: 18px; margin-bottom: 60px;}
 .sectionIII button { font-size: 18px; background-color: var(--btn-bg1); padding: 20px 40px; border: none; border-radius: 8px; color: var(--txt-col1);  margin-bottom: 60px;}
 .sectionIII-circles { position: relative; width: 259.74px; height: auto; aspect-ratio: 1 / 1; display: grid; place-items: center;  align-self: center; grid-area: orbit; margin: 0 auto;}
@@ -66,3 +66,11 @@ background-image: url('../assets/images/mobile-hero-bg.png'); background-size: c
   from { transform: rotate(0deg);}
   to { transform: rotate(360deg);}
 }
+
+.sectionIV { padding: 80px 16px; background-color: var(--bg-col1); display: grid; grid-template-columns: 1fr; gap: 60px;}
+.sectionIV .contnd { color: var(--txt-col1); text-align: center; width: 288px; margin: 0 auto;}
+.sectionIV h2 { font-size: 36px; margin-bottom: 24px;}
+.sectionIV .yellow { background-image: url('../assets/images/drawing.svg'); background-repeat: no-repeat; padding-bottom: 1px; padding-right: 15px; background-position: right bottom; background-size: contain;}
+.sectionIV p { font-size: 18px; margin-bottom: 60px;}
+.sectionIV button { font-size: 18px; background-color: var(--btn-bg1); padding: 20px 40px; border: none; border-radius: 8px; color: var(--txt-col1);}
+.sectionIV .img { width: 284.5px; height: 198.65px; background-color: var(--bg-col2); margin: 0 auto;}
